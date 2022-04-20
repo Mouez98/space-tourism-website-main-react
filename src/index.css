@@ -1,5 +1,10 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +12,73 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
 }
+
+.container {
+ width: 95%;
+ margin: 0 auto 0;
+}
+
+.home {
+  background: url(../../space-tourism-website-main/starter-code/assets/design/home/background-home-mobile.jpg) ;
+  color: #fff;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 1rem;
+  text-align: center;
+}
+.home header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+
+}
+.home header .logo, .burgerIcon {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+.home header img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.home header nav {
+  
+}
+.home header nav ul {
+
+}
+.home header nav ul li{
+
+}
+
+.home main {
+
+}
+
+.home main .text {
+  
+}
+.home main .text .question {
+  margin: 1rem 0;
+}
+.home main .text .title{
+  margin: 1rem 0;
+}
+.home main .text .description {
+  margin: 1rem 0;
+}
+.home main .button {
+
+}
+.home main .button .circle {
+
+}
+.home main .button .circle .text {
+
+}
+
