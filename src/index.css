@@ -1,13 +1,20 @@
-*{
+:root {
+  --main-white-color: hsl(231, 77.4%, 89.6%);
+  --white: #fff;
+  --dark-blue: #0b0d17;
+  --light-grey: #979797;
+  --light-blue: #d0d6f9;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
 }
 
 body {
-  
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,68 +24,306 @@ ul {
 }
 
 .container {
- width: 95%;
- margin: 0 auto 0;
+  width: 95%;
+  margin: 0 auto 0;
 }
 
 .home {
-  background: url(../../space-tourism-website-main/starter-code/assets/design/home/background-home-mobile.jpg) ;
-  color: #fff;
+  background: url(../../space-tourism-website-main/starter-code/assets/design/home/background-home-mobile.jpg);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 1rem;
   text-align: center;
+  color: var(--main-white-color);
 }
 .home header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.7rem;
-
+  padding-left: 1rem;
 }
-.home header .logo, .burgerIcon {
-    width: 1.7rem;
-    height: 1.7rem;
+.home header .logo {
+  width: 40px;
+  height: 40px;
+}
+.home header .burgerIcon {
+  width: 24px;
+  height: 21px;
+  margin-right: 10px;
 }
 .home header img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-
 
 .home header nav {
-  
 }
 .home header nav ul {
-
 }
-.home header nav ul li{
-
+.home header nav ul li {
 }
 
 .home main {
-
+  color: var(--white);
 }
 
 .home main .text {
-  
+  margin: 70px 0 40px;
 }
 .home main .text .question {
   margin: 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  font-size: 16px;
+  font-weight: normal;
 }
-.home main .text .title{
+.home main .text .title {
   margin: 1rem 0;
+  font-family: Bellefair;
+  font-size: 80px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 .home main .text .description {
   margin: 1rem 0;
+  line-height: 1.5;
+  color: var(--light-blue);
 }
 .home main .button {
-
+  width: 150px;
+  height: 150px;
+  display: grid;
+  color: var(--dark-blue);
+  margin: 0 auto;
+  position: relative;
 }
+.home main .button::before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--light-grey);
+}
+
 .home main .button .circle {
-
+  border-radius: 50%;
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .home main .button .circle .text {
-
+  color: #0b0d17;
+  font-family: Bellefair;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 65px;
 }
 
+.aside {
+  padding: 14px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate(4000%);
+  background-color: rgb(10 16 58 / 50%);
+  height: 100vh;
+  display: flex;
+  width: 69%;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+  transition: all 0.3s linear;
+}
+
+.aside.show-aside {
+  transform: translate(0);
+}
+
+aside button {
+  align-self: flex-end;
+  width: 24px;
+  border: none;
+  height: 24px;
+  background-color: transparent;
+}
+aside button img {
+  width: 100%;
+}
+aside .links {
+  padding: 0;
+  align-self: flex-start;
+  text-align: left;
+}
+
+aside .links li {
+  text-transform: uppercase;
+  margin: 24px 0;
+  color: var(--white);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+aside .links li span {
+  margin-right: 8px;
+}
+/* Tablet */
+@media (min-width: 368px) and (max-width: 1024px) {
+  .home {
+    background-image: url(./assets/design/home/background-home-tablet.jpg);
+  }
+  .home .container {
+    width: 70%;
+  }
+  .home header {
+    padding-left: 1.5rem;
+  }
+  .home header nav {
+    height: 70px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(255 255 255/ 4%);
+    align-items: center;
+  }
+  .home header ul {
+    display: flex;
+  }
+  .home header ul li {
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    color: var(--white);
+  }
+  .home header ul li::before {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    background-color: var(--white);
+  }
+  .home header ul li:hover::before {
+    width: 100%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .home {
+    background-image: url(./assets/design/home/background-home-desktop.jpg);
+  }
+  .home .container {
+    width: 70%;
+  }
+  .home header {
+    padding-left: 1.5rem;
+  }
+  .home header nav {
+    padding: 0 50px;
+    height: 70px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    position: relative;
+    background-color: rgb(255 255 255/ 4%);
+    align-items: center;
+  }
+  
+  .home header nav::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -452px;
+    width: 473px;
+    height: 1px;
+    background-color: var(--light-grey);
+  }
+  .home header ul {
+    display: flex;
+  }
+  .home header ul li {
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    color: var(--white);
+  }
+  .home header ul li::before {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    background-color: var(--white);
+  }
+  .home header ul li:hover::before {
+    width: 100%;
+  }
+  .home main {
+    display: grid;
+    margin-top: 120px;
+    grid-template-columns: repeat(2, 450px);
+    color: var(--white);
+    align-items: center;
+  }
+
+  .home main .text {
+    margin: 70px 0 40px;
+    text-align: left;
+
+  }
+  .home main .text .question {
+
+    font-size: 28px;
+  }
+  .home main .text .title {
+    font-size: 150px;
+
+  }
+  .home main .text .description {
+    font-size: 18px;
+  }
+  .home main .button {
+    width: 275px;
+    height: 275px;
+    
+     
+  }
+  .home main .button:hover::before {
+
+    opacity: 0.3;
+ 
+    
+    display: block;
+   
+  }
+  
+  .home main .button .circle {
+    align-items: center;
+    display: grid;
+    
+  }
+  
+  .home main .button .circle .text {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 1.2px;
+    margin-top: 50px;
+  }
+}
