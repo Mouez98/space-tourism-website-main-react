@@ -1,12 +1,22 @@
-import Home from './components/Home/Home';
+import {Routes, Route} from 'react-router-dom'
 
-import './App.css';
+import Home from "./pages/Home";
+import Crew from './pages/Crew'
+import Technolgy from './pages/Technolgy'
+import Destination from './pages/Destination'
+
+import "./App.css";
+
 
 function App() {
   return (
-   
-     <Home />
-    
+    <Routes>
+       <Route path='/' element={<Home />} />
+       <Route path='/destinations' element={<Destination />} />
+       <Route path='/crew' element={<Crew />} />
+       <Route path='/technology' element={<Technolgy />} />
+    </Routes>
+      
   );
 }
 
