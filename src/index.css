@@ -24,8 +24,8 @@ ul {
 }
 
 .container {
-  width: 95%;
-  margin: 0 auto 0;
+  /* width: 95%;
+  margin: 0 auto 0; */
 }
 
 .home {
@@ -37,22 +37,29 @@ ul {
   text-align: center;
   color: var(--main-white-color);
 }
-.home header {
+header {
   display: flex;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  left: 0;
   justify-content: space-between;
   margin-bottom: 1.7rem;
   padding-left: 1rem;
+
 }
-.home header .logo {
+.header .logo {
   width: 40px;
   height: 40px;
 }
-.home header .burgerIcon {
+.header .burgerIcon {
   width: 24px;
   height: 21px;
   margin-right: 10px;
 }
-.home header img {
+header img {
   width: 100%;
   height: 100%;
 }
@@ -230,7 +237,8 @@ aside .links li span {
     background-image: url(./assets/design/home/background-home-desktop.jpg);
   }
   .home .container {
-    width: 70%;
+    width: 100%;
+    margin: 0;
   }
   .home header {
     padding-left: 1.5rem;

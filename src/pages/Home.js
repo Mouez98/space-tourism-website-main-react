@@ -3,8 +3,8 @@ import HeaderNav from "../components/HeaderNav";
 const Home = () => {
  
   return (
+    
     <section className="home">
-      <HeaderNav />
        <div className="container">
 
         <main className="main">
@@ -26,6 +26,7 @@ const Home = () => {
         </main>
       </div>
     </section>
+    
   );
 };
 

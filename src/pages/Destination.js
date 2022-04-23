@@ -1,13 +1,22 @@
-import { useParams, useLocation } from "react-router-dom"
+import { useContext } from "react";
+import {  useLocation } from "react-router-dom";
+import { LinksContext } from "../store/context-links";
 
 const Destination = () => {
-    const parm = useParams()
+    const linksCtx = useContext(LinksContext)
     const location = useLocation()
-    console.log(location);
-    const searchParams =new URLSearchParams.get(location.pathname)
-    console.log(searchParams);
+    const currentPage = location.pathname.slice(1)
+
+    console.log(linksCtx.currentPage);
+    
    return(
-       <h2>Destination</h2>
+       <section className={currentPage} >
+          <h2>{currentPage}</h2>
+       <p>
+           {linksCtx.currentPage}
+       </p> 
+       </section>
+       
    )
 }
 

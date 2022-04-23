@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import { LinksContext } from "../store/context-links";
 
@@ -11,6 +11,7 @@ const HeaderNav = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showSidebar, setSidebar] = useState(false);
   const linksCtx = useContext(LinksContext);
+
   const links = (
     <>
       
