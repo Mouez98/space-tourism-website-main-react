@@ -22,6 +22,10 @@ body {
 ul {
   list-style: none;
 }
+section {
+  padding-top: 90px;
+  text-align: center;
+}
 
 .container {
   /* width: 95%;

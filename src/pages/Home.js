@@ -1,4 +1,3 @@
-import HeaderNav from "../components/HeaderNav";
 
 const Home = () => {
  
