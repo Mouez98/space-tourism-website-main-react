@@ -1,4 +1,4 @@
-// import {hot} from 'react-hot-loader/root'
+import {hot} from 'react-hot-loader/root'
 
 import Layout from './container/Layout'
 
@@ -8,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default hot(App);
