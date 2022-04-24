@@ -14,8 +14,6 @@ const Destination = ({destinations}) => {
 
   // // console.log(linksCtx.currentPage);
 
-  useEffect(()=>{},['hot'])
-
   return (
     <section className={'hjgvhj'}>
       <h2>
