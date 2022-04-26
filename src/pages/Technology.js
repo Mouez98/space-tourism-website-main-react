@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const Crew = ({crew}) => {
-  const [curMember, setCurMember ] = useState(0)
+
+const Technology = ({technology}) => {
+  const [curTechnology, setCurTechnology ] = useState(0)
   const location = useLocation();
   const cssClass = location.pathname.slice(1);
 
-  const {name,role, bio, images} = crew[curMember]
+
+  const {name, description, images} = technology[curTechnology]
+
 
   return (
     <section className={cssClass}>
@@ -14,17 +17,15 @@ const Crew = ({crew}) => {
         <span>02</span> Meet your crew
       </h2>
       <article>
-        <img src={images.png} alt={name} />
+        <img src={images.portrait} alt={name} />
         <div className="details">
           <ul>
-           
-         {crew.map((crewMember,index) =>  <li key={crewMember.name} onClick={()=> setCurMember(index)}>*</li>)}
-            
+          {technology ? technology.map((des, index )=> <li key={des.name} onClick={()=>setCurTechnology(index)}>{index + 1}</li>): null }
           </ul>
-          <h3 className="header">{role}</h3>
+          <h3 className="header">The terminolgy</h3>
           <h3 className="header">{name}</h3>
           <p className="description">
-           {bio}
+          {description}
           </p>
         </div>
       </article>
@@ -32,4 +33,5 @@ const Crew = ({crew}) => {
   );
 };
 
-export default Crew;
+export default Technology;
+

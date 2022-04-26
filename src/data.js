@@ -1,11 +1,32 @@
-{
+// Destinations images
+import moon from "./assets/design/destination/image-moon.png"
+import europa from "./assets/design/destination/image-europa.png"
+import titan from "./assets/design/destination/image-titan.png"
+import mars from "./assets/design/destination/image-mars.png"
+
+//Crew images
+import victor from "./assets/design/crew/image-victor-glover.png"
+import shuttleworth from "./assets/design/crew/image-mark-shuttleworth.png"
+import hurley from "./assets/design/crew/image-douglas-hurley.png"
+import anousheh from "./assets/design/crew/image-anousheh-ansari.png"
+
+//tecgnolohy images 
+import spaceport from './assets/design/technology/image-spaceport-landscape.jpg'
+import spaceportPortrait from './assets/design/technology/image-spaceport-portrait.jpg'
+import capsule from './assets/design/technology/image-space-capsule-landscape.jpg'
+import capsulePortrait from './assets/design/technology/image-space-capsule-portrait.jpg'
+import vehicle from './assets/design/technology/image-launch-vehicle-landscape.jpg'
+import vehiclePortrait from './assets/design/technology/image-launch-vehicle-portrait.jpg'
+
+ const data = {
   "destinations": [
     {
       "name": "Moon",
       "images": {
-        "png": "./assets/destination/image-moon.png",
-        "webp": "./assets/destination/image-moon.webp"
-      },
+        "png": moon,
+        "webp": "./assets/destination/image-mars.webp"
+      }
+      ,
       "description": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
       "distance": "384,400 km",
       "travel": "3 days"
@@ -13,7 +34,7 @@
     {
       "name": "Mars",
       "images": {
-        "png": "./assets/destination/image-mars.png",
+        "png": mars,
         "webp": "./assets/destination/image-mars.webp"
       },
       "description": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
@@ -23,7 +44,7 @@
     {
       "name": "Europa",
       "images": {
-        "png": "./assets/destination/image-europa.png",
+        "png": europa,
         "webp": "./assets/destination/image-europa.webp"
       },
       "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
@@ -33,7 +54,7 @@
     {
       "name": "Titan",
       "images": {
-        "png": "./assets/destination/image-titan.png",
+        "png": titan,
         "webp": "./assets/destination/image-titan.webp"
       },
       "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
@@ -45,7 +66,7 @@
     {
       "name": "Douglas Hurley",
       "images": {
-        "png": "./assets/crew/image-douglas-hurley.png",
+        "png":hurley,
         "webp": "./assets/crew/image-douglas-hurley.webp"
       },
       "role": "Commander",
@@ -54,7 +75,7 @@
     {
       "name": "Mark Shuttleworth",
       "images": {
-        "png": "./assets/crew/image-mark-shuttleworth.png",
+        "png": shuttleworth,
         "webp": "./assets/crew/image-mark-shuttleworth.webp"
       },
       "role": "Mission Specialist",
@@ -63,7 +84,7 @@
     {
       "name": "Victor Glover",
       "images": {
-        "png": "./assets/crew/image-victor-glover.png",
+        "png": victor,
         "webp": "./assets/crew/image-victor-glover.webp"
       },
       "role": "Pilot",
@@ -72,7 +93,7 @@
     {
       "name": "Anousheh Ansari",
       "images": {
-        "png": "./assets/crew/image-anousheh-ansari.png",
+        "png": anousheh,
         "webp": "./assets/crew/image-anousheh-ansari.webp"
       },
       "role": "Flight Engineer",
@@ -83,26 +104,28 @@
     {
       "name": "Launch vehicle",
       "images": {
-        "portrait": "./assets/technology/image-launch-vehicle-portrait.jpg",
-        "landscape": "./assets/technology/image-launch-vehicle-landscape.jpg"
+        "portrait": vehiclePortrait,
+        "landscape": vehicle
       },
       "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
     },
     {
       "name": "Spaceport",
       "images": {
-        "portrait": "./assets/technology/image-spaceport-portrait.jpg",
-        "landscape": "./assets/technology/image-spaceport-landscape.jpg"
+        "portrait": spaceportPortrait,
+        "landscape": spaceport
       },
       "description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
     },
     {
       "name": "Space capsule",
       "images": {
-        "portrait": "./assets/technology/image-space-capsule-portrait.jpg",
-        "landscape": "./assets/technology/image-space-capsule-landscape.jpg"
+        "portrait": capsulePortrait,
+        "landscape": capsule
       },
       "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
     }
   ]
 }
+
+export default data

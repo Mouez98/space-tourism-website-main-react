@@ -1,48 +1,51 @@
-import { useContext, useEffect, useState} from "react";
-// import { useLocation } from "react-router-dom";
-// import { LinksContext } from "../store/context-links";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-import Moon from "../assets/design/destination/image-moon.png";
+import '../components/destination/Destinations.css'
 
-const Destination = ({destinations}) => {
-  const [curDestination, setCurDestination ] = useState(0)
-  // const location = useLocation();
-  // const linksCtx = useContext(LinksContext);
-  // // const currentPage = linksCtx.destinations[0]
-  // console.log(linksCtx.destinations[curDestination].name);
- 
+const Destination = ({ destinations }) => {
+  const [curDestination, setCurDestination] = useState(0);
+  const location = useLocation();
+  const cssClass = location.pathname.slice(1);
 
-  // // console.log(linksCtx.currentPage);
+  const { name, description, distance, travel, images } =
+    destinations[curDestination];
 
   return (
-    <section className={'hjgvhj'}>
-      <h2>
+    <section className={cssClass}>
+      <h2 className="title">
         <span>01</span> Pick Up Your destinations
       </h2>
-      
+
       <article>
-        <img src={Moon} alt="moon" />
-        
-        <div className="details">
-          <ul>
-          {destinations ? destinations.map(des => <li key={des.name}>{des.name}</li>): null }
-        </ul>
-          <h3 className="header">{destinations[curDestination].name}</h3>
-          <p className="description">
-            {destinations[curDestination].description}
-          </p>
+        <div className="image-container">
+          <img src={images.png} alt={name} />
         </div>
-        <hr/>
-        
-        <div>
-            <div>
-                <p>distance</p>
-                <h3>{destinations[curDestination].distance}</h3>
-            </div>
-            <div>
-                <p>Travel</p>
-                <h3>{destinations[curDestination].travel}</h3>
-            </div>
+
+        <div className="details">
+          <ul className="destinations-list">
+            {destinations
+              ? destinations.map((des, index) => (
+                  <li key={des.name} onClick={() => setCurDestination(index)}>
+                    {des.name}
+                  </li>
+                ))
+              : null}
+          </ul>
+          <h3 className="destination-name">{name}</h3>
+          <p className="description">{description}</p>
+        </div>
+        <hr />
+
+        <div className="single-destination-details">
+          <div>
+            <p>distance</p>
+            <h3>{distance}</h3>
+          </div>
+          <div>
+            <p>Travel</p>
+            <h3>{travel}</h3>
+          </div>
         </div>
       </article>
     </section>

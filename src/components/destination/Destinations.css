@@ -1,0 +1,56 @@
+.destinations {
+    background-image: url(../../assets//design/destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+
+}
+article {
+   
+}
+
+.image-container {
+    width: 170px;
+    height: 170px;
+    margin: 30px auto;
+}
+
+.image-container img {
+    width: 100%;
+    
+}
+
+.destinations .title {
+    font-family: 'Barlow Condensed';
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.destinations .details {
+    /* display: flex; */
+}
+
+.destinations-list {
+    display: flex;
+    /* width: 100%; */
+    margin: 20px 0;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.destination-name {
+    font-size: 56px;
+    font-family: 'Bellefair';
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 15px;
+    color : #D0D6F9;
+    text-align: center;
+    margin: 20px 0 ;
+}

@@ -41,39 +41,6 @@ section {
   text-align: center;
   color: var(--main-white-color);
 }
-header {
-  display: flex;
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  width: 100%;
-  padding: 1rem;
-  left: 0;
-  justify-content: space-between;
-  margin-bottom: 1.7rem;
-  padding-left: 1rem;
-
-}
-.header .logo {
-  width: 40px;
-  height: 40px;
-}
-.header .burgerIcon {
-  width: 24px;
-  height: 21px;
-  margin-right: 10px;
-}
-header img {
-  width: 100%;
-  height: 100%;
-}
-
-.home header nav {
-}
-.home header nav ul {
-}
-.home header nav ul li {
-}
 
 .home main {
   color: var(--white);
@@ -144,53 +111,7 @@ header img {
   margin-top: 65px;
 }
 
-.aside {
-  padding: 14px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transform: translate(4000%);
-  background-color: rgb(10 16 58 / 50%);
-  height: 100vh;
-  display: flex;
-  width: 69%;
-  flex-direction: column;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  z-index: 10;
-  transition: all 0.3s linear;
-}
 
-.aside.show-aside {
-  transform: translate(0);
-}
-
-aside button {
-  align-self: flex-end;
-  width: 24px;
-  border: none;
-  height: 24px;
-  background-color: transparent;
-}
-aside button img {
-  width: 100%;
-}
-aside .links {
-  padding: 0;
-  align-self: flex-start;
-  text-align: left;
-}
-
-aside .links li {
-  text-transform: uppercase;
-  margin: 24px 0;
-  color: var(--white);
-  font-size: 18px;
-  letter-spacing: 2px;
-}
-aside .links li span {
-  margin-right: 8px;
-}
 /* Tablet */
 @media (min-width: 368px) and (max-width: 1024px) {
   .home {
@@ -199,40 +120,7 @@ aside .links li span {
   .home .container {
     width: 70%;
   }
-  .home header {
-    padding-left: 1.5rem;
-  }
-  .home header nav {
-    height: 70px;
-    backdrop-filter: blur(20px);
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgb(255 255 255/ 4%);
-    align-items: center;
-  }
-  .home header ul {
-    display: flex;
-  }
-  .home header ul li {
-    margin: 0 10px;
-    position: relative;
-    cursor: pointer;
-    color: var(--white);
-  }
-  .home header ul li::before {
-    content: "";
-    height: 2px;
-    width: 0;
-    position: absolute;
-    bottom: -24px;
-    left: 0;
-    background-color: var(--white);
-  }
-  .home header ul li:hover::before {
-    width: 100%;
-  }
+  
 }
 
 /* Desktop */
@@ -244,49 +132,7 @@ aside .links li span {
     width: 100%;
     margin: 0;
   }
-  .home header {
-    padding-left: 1.5rem;
-  }
-  .home header nav {
-    padding: 0 50px;
-    height: 70px;
-    backdrop-filter: blur(20px);
-    display: flex;
-    position: relative;
-    background-color: rgb(255 255 255/ 4%);
-    align-items: center;
-  }
   
-  .home header nav::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -452px;
-    width: 473px;
-    height: 1px;
-    background-color: var(--light-grey);
-  }
-  .home header ul {
-    display: flex;
-  }
-  .home header ul li {
-    margin: 0 10px;
-    position: relative;
-    cursor: pointer;
-    color: var(--white);
-  }
-  .home header ul li::before {
-    content: "";
-    height: 2px;
-    width: 0;
-    position: absolute;
-    bottom: -24px;
-    left: 0;
-    background-color: var(--white);
-  }
-  .home header ul li:hover::before {
-    width: 100%;
-  }
   .home main {
     display: grid;
     margin-top: 120px;

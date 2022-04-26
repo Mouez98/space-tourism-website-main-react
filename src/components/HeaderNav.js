@@ -6,6 +6,7 @@ import { LinksContext } from "../store/context-links";
 import logo from "../assets/shared/logo.svg";
 import iconBurger from "../assets/shared/icon-hamburger.svg";
 import closeIcon from "../assets/shared/icon-close.svg";
+import './Header.css'
 
 const HeaderNav = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
