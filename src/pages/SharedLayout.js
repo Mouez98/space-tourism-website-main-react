@@ -3,10 +3,10 @@ import HeaderNav from "../components/HeaderNav";
 
 const SharedLayout = () => {
   return(
-      <div className="container">
+      <>
           <HeaderNav />
           <Outlet />
-      </div>
+      </>
   )
 }
 

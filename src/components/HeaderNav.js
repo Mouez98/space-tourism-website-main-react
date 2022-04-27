@@ -1,31 +1,44 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { LinksContext } from "../store/context-links";
 
 import logo from "../assets/shared/logo.svg";
 import iconBurger from "../assets/shared/icon-hamburger.svg";
 import closeIcon from "../assets/shared/icon-close.svg";
-import './Header.css'
+import "./Header.css";
 
 const HeaderNav = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showSidebar, setSidebar] = useState(false);
   const linksCtx = useContext(LinksContext);
 
-
   const links = (
-    <>
+    <ul className="links">
+    <li>
+      <NavLink
+        to="/"
+        className={(isActive) => (isActive ? "active" : '')}
+      >
+        01 Home
+      </NavLink>
+    </li>
       
-      <Link to="/">01 Home</Link>
       {linksCtx
         ? Object.keys(linksCtx).map((link, index) => (
-            <Link to={link} key={link}>
-              {`0${index + 2}`} {link}
-            </Link>
+            <li key={link}>
+              <NavLink
+                to={link}
+                
+                className={(isActive) => (isActive ? 'active': '')}
+              >
+                <span>{`0${index + 2}`}</span>
+                {link}
+              </NavLink>
+            </li>
           ))
         : null}
-    </>
+    </ul>
   );
 
   useEffect(() => {
@@ -48,16 +61,14 @@ const HeaderNav = () => {
             <div className="burgerIcon" onClick={showSidebarHandler}>
               <img src={iconBurger} alt="burgerIcon" />
             </div>
-          ) : (
-            <ul>{links}</ul>
-          )}
+          ) : <>{links}</>}
         </nav>
       </header>
       <aside className={showSidebar ? "aside show-aside" : "aside"}>
         <button onClick={showSidebarHandler}>
           <img src={closeIcon} alt="X" />
         </button>
-        <ul className="links">{links}</ul>
+        {links}
       </aside>
     </>
   );

@@ -4,7 +4,7 @@ const Home = () => {
   return (
     
     <section className="home">
-       <div className="container">
+       
 
         <main className="main">
           <article className="text">
@@ -23,7 +23,7 @@ const Home = () => {
             </div>
           </article>
         </main>
-      </div>
+     
     </section>
     
   );
