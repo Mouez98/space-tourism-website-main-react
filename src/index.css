@@ -4,12 +4,13 @@
   --white: #fff;
   --dark-blue: #0b0d17;
   --light-grey: #979797;
+  --darken-grey: #383B4B;
   --light-blue: #d0d6f9;
   /* main fonts */
   --barlow: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
   "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
   "Helvetica Neue", sans-serif;
-  --bellafair: 'Bellefair', sans-serif;
+  --bellefair: 'Bellefair';
 }
 
 * {

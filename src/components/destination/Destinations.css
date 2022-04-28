@@ -23,7 +23,7 @@ article {
   width: 100%;
 }
 
-.destinations .title {
+.title {
   font-family: var(--barlow);
   font-size: 16px;
   text-transform: uppercase;
@@ -62,6 +62,7 @@ article {
 
 .description {
   font-size: 15px;
+  line-height: 1.5;
   color: #d0d6f9;
   text-align: center;
   margin: 20px 0;

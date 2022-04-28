@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
+import '../components/crew/Crew.css'
+
 const Crew = ({crew}) => {
   const [curMember, setCurMember ] = useState(0)
   const location = useLocation();
@@ -10,19 +12,23 @@ const Crew = ({crew}) => {
 
   return (
     <section className={cssClass}>
-      <h2>
+      <h2 className="title">
         <span>02</span> Meet your crew
       </h2>
       <article>
+        <div className="image-container">
+
         <img src={images.png} alt={name} />
+        <hr/>
+        </div>
         <div className="details">
-          <ul>
+          <ul className="crew-list">
            
-         {crew.map((crewMember,index) =>  <li key={crewMember.name} onClick={()=> setCurMember(index)}>*</li>)}
+         {crew.map((crewMember,index) =>  <li key={crewMember.name} onClick={()=> setCurMember(index)}></li>)}
             
           </ul>
-          <h3 className="header">{role}</h3>
-          <h3 className="header">{name}</h3>
+          <h3 className="role">{role}</h3>
+          <h3 className="crew-member">{name}</h3>
           <p className="description">
            {bio}
           </p>
