@@ -20,7 +20,7 @@ const HeaderNav = () => {
         to="/"
         className={(isActive) => (isActive ? "active" : '')}
       >
-        01 Home
+       <span>01</span>  Home
       </NavLink>
     </li>
       
