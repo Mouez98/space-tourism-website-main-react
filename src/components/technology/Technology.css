@@ -1,0 +1,68 @@
+.technology {
+    background-image: url(../../assets/design/technology/background-technology-mobile.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+article {
+    padding-bottom: 20px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .technology .image-container {
+    width: 374px;
+    height: 170px;
+    margin: 30px auto;
+  }
+  
+  .crew .image-container img {
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  
+  .destinations .details {
+  }
+  
+  .technology-list {
+    display: flex;
+    margin: 20px auto;
+  }
+  
+  .technology-list li {
+      display: grid;
+      align-items: center;
+      margin: 0 10px;
+      cursor: pointer;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: transparent;
+  }
+  .technology-list li:hover  {
+      background-color: var(--white);
+      color: #000;
+  }
+  .technology-list li .active  {
+      border-bottom: 2px solid var(--white);
+  }
+  
+  
+
+  .sub-header {
+font-size: 18px;
+    font-family: var(--bellefair);
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    
+  }
+  
+
+  
+  
