@@ -1,16 +1,14 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import '../components/technology/Technology.css'
+import "../components/technology/Technology.css";
 
-const Technology = ({technology}) => {
-  const [curTechnology, setCurTechnology ] = useState(0)
+const Technology = ({ technology }) => {
+  const [curTechnology, setCurTechnology] = useState(0);
   const location = useLocation();
   const cssClass = location.pathname.slice(1);
 
-
-  const {name, description, images} = technology[curTechnology]
-
+  const { name, description, images } = technology[curTechnology];
 
   return (
     <section className={cssClass}>
@@ -19,18 +17,21 @@ const Technology = ({technology}) => {
       </h2>
       <article>
         <div className="image-container">
-
-        <img src={images.landscape} alt={name} />
+          <img src={images.landscape} alt={name} />
         </div>
         <div className="details">
-          <ul className="technology-list">
-          {technology ? technology.map((des, index )=> <li key={des.name} onClick={()=>setCurTechnology(index)}>{index + 1}</li>): null }
+          <ul className="list">
+            {technology
+              ? technology.map((des, index) => (
+                  <li key={des.name} onClick={() => setCurTechnology(index)}>
+                    {index + 1}
+                  </li>
+                ))
+              : null}
           </ul>
           <h3 className="header">The terminolgy</h3>
           <h3 className="sub-header">{name}</h3>
-          <p className="description">
-          {description}
-          </p>
+          <p className="description">{description}</p>
         </div>
       </article>
     </section>
@@ -38,4 +39,3 @@ const Technology = ({technology}) => {
 };
 
 export default Technology;
-

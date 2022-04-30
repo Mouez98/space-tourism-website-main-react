@@ -6,7 +6,7 @@ const Details = ({name, setCurDestination, description, distance, travel, destin
     return(
 <>
 <div className="details">
-        <Links setCurDestination={setCurDestination} destinations={destinations}/>
+        <Links setCurDestination={setCurDestination} destinations={destinations} name={name}/>
         <h3 className="destination-name">{name}</h3>
         <p className="description">{description}</p>
       </div>

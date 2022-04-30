@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import '../components/crew/Crew.css'
+import "../components/crew/Crew.css";
 
-const Crew = ({crew}) => {
-  const [curMember, setCurMember ] = useState(0)
+const Crew = ({ crew }) => {
+  const [curMemberName, setCurMemberName] = useState('')
+  const [curMemberIndex, setCurMemberIndex] = useState(0);
+
   const location = useLocation();
   const cssClass = location.pathname.slice(1);
+  const { name, role, bio, images } = crew[curMemberIndex];
 
-  const {name,role, bio, images} = crew[curMember]
+  function linkClickHandler(index, name) {
+   setCurMemberIndex(index)
+   setCurMemberName(name)
+  }
 
   return (
     <section className={cssClass}>
@@ -17,21 +23,23 @@ const Crew = ({crew}) => {
       </h2>
       <article>
         <div className="image-container">
-
-        <img src={images.png} alt={name} />
-        <hr/>
+          <img src={images.png} alt={name} />
+          <hr />
         </div>
         <div className="details">
-          <ul className="crew-list">
-           
-         {crew.map((crewMember,index) =>  <li key={crewMember.name} onClick={()=> setCurMember(index)}></li>)}
-            
+          <ul className="list">
+            {crew.map((crewMember, index) => (
+              <li
+                key={crewMember.name}
+                className={crewMember.name === curMemberName ? 'active' : ''}
+                onClick={()=> linkClickHandler(index, crewMember.name )}
+                
+              ></li>
+            ))}
           </ul>
           <h3 className="role">{role}</h3>
           <h3 className="crew-member">{name}</h3>
-          <p className="description">
-           {bio}
-          </p>
+          <p className="description">{bio}</p>
         </div>
       </article>
     </section>

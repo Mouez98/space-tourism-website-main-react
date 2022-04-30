@@ -52,7 +52,7 @@ const HeaderNav = () => {
   const showSidebarHandler = () => setSidebar((prev) => !prev);
   return (
     <>
-      <header>
+      <header className="header">
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
