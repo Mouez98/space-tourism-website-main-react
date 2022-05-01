@@ -1,9 +1,9 @@
-const Links = ({ destinations, setCurDestination, name }) => {
+const Links = ({ destinations, setCurDestination, curDestinationIndex }) => {
   return (
     <ul className="list">
       {destinations
         ? destinations.map((des, index) => (
-            <li key={des.name}  className={name === des.name ? 'active': ''}onClick={() => setCurDestination(index,des.name)}>
+            <li key={des.name}  className={index === curDestinationIndex ? 'active': ''}onClick={() => setCurDestination(index)}>
               {des.name}
             </li>
           ))

@@ -2,11 +2,11 @@ import Links from "./Links";
 
 
 
-const Details = ({name, setCurDestination, description, distance, travel, destinations }) => {
+const Details = ({name, setCurDestination, description, distance, travel, destinations, index }) => {
     return(
-<>
 <div className="details">
-        <Links setCurDestination={setCurDestination} destinations={destinations} name={name}/>
+<div>
+        <Links setCurDestination={setCurDestination} curDestinationIndex={index} destinations={destinations} name={name}/>
         <h3 className="destination-name">{name}</h3>
         <p className="description">{description}</p>
       </div>
@@ -21,7 +21,7 @@ const Details = ({name, setCurDestination, description, distance, travel, destin
           <h3>{travel}</h3>
         </div>
       </div>
-</>
+</div>
     )
 }
 

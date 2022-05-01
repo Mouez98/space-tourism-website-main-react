@@ -6,11 +6,7 @@
   height: auto;
 }
 
-article {
-  padding-bottom: 20px;
-  width: 95%;
-  margin: 0 auto;
-}
+
 
 .crew .image-container {
   width: 327px;
@@ -29,6 +25,7 @@ article {
 
 .crew .list li {
   margin: 0 10px;
+  opacity: 17%;
   cursor: pointer;
   width: 10px;
   height: 10px;
@@ -37,14 +34,14 @@ article {
 }
 .crew .list li.active {
   background-color: var(--white);
+  opacity: 100%;
 }
 
 .crew .list li:hover {
   background-color: var(--white);
+  opacity: 50%;
 }
-.crew .list li .active {
-  border-bottom: 2px solid var(--white);
-}
+
 
 .crew-member {
   font-family: var(--bellefair);

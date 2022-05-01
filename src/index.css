@@ -39,15 +39,19 @@ section {
   /* width: 95%;
   margin: 0 auto 0; */
 }
+article {
+  padding-bottom: 20px;
+  width: 95%;
+  margin: 0 auto;
+}
 
 .home {
   background: url(../../space-tourism-website-main/starter-code/assets/design/home/background-home-mobile.jpg);
-  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 1rem;
   text-align: center;
   color: var(--main-white-color);
+  padding-top: 1rem;
 }
 
 .home main {
@@ -134,6 +138,7 @@ section {
 /* Desktop */
 @media (min-width: 1025px) {
   .home {
+    padding-bottom:  40px ;
     background-image: url(./assets/design/home/background-home-desktop.jpg);
   }
   .home .container {
@@ -143,7 +148,8 @@ section {
   
   .home main {
     display: grid;
-    margin-top: 120px;
+    margin: 120px auto 0;
+    width: 90%;
     grid-template-columns: repeat(2, 450px);
     color: var(--white);
     align-items: center;
@@ -164,6 +170,7 @@ section {
   }
   .home main .text .description {
     font-size: 18px;
+    text-align: left;
   }
   .home main .button {
     width: 275px;
@@ -174,7 +181,6 @@ section {
   .home main .button:hover::before {
 
     opacity: 0.3;
- 
     
     display: block;
    

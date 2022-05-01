@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import "../components/crew/Crew.css";
 
 const Crew = ({ crew }) => {
-  const [curMemberName, setCurMemberName] = useState('')
   const [curMemberIndex, setCurMemberIndex] = useState(0);
 
   const location = useLocation();
@@ -13,7 +12,6 @@ const Crew = ({ crew }) => {
 
   function linkClickHandler(index, name) {
    setCurMemberIndex(index)
-   setCurMemberName(name)
   }
 
   return (
@@ -31,8 +29,8 @@ const Crew = ({ crew }) => {
             {crew.map((crewMember, index) => (
               <li
                 key={crewMember.name}
-                className={crewMember.name === curMemberName ? 'active' : ''}
-                onClick={()=> linkClickHandler(index, crewMember.name )}
+                className={curMemberIndex === index ? 'active' : ''}
+                onClick={()=> linkClickHandler(index )}
                 
               ></li>
             ))}

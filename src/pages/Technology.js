@@ -4,11 +4,15 @@ import { useLocation } from "react-router-dom";
 import "../components/technology/Technology.css";
 
 const Technology = ({ technology }) => {
-  const [curTechnology, setCurTechnology] = useState(0);
+  const [curTechnologyIndex, setCurTechnologyIndex] = useState(0);
   const location = useLocation();
   const cssClass = location.pathname.slice(1);
 
-  const { name, description, images } = technology[curTechnology];
+  const { name, description, images } = technology[curTechnologyIndex];
+
+  const linkClickHandler = (index) => {
+    setCurTechnologyIndex(index);
+  };
 
   return (
     <section className={cssClass}>
@@ -23,7 +27,11 @@ const Technology = ({ technology }) => {
           <ul className="list">
             {technology
               ? technology.map((des, index) => (
-                  <li key={des.name} onClick={() => setCurTechnology(index)}>
+                  <li
+                    key={des.name}
+                    className={index === curTechnologyIndex ? "active" : ""}
+                    onClick={() => linkClickHandler(index)}
+                  >
                     {index + 1}
                   </li>
                 ))

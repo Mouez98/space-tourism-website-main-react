@@ -16,13 +16,13 @@ const Home = () => {
               this world experience!
             </p>
           </div>
+          </article>
           <div className="button">
             <div className="circle">
               <div className="text">Explore</div>
             </div>
           </div>
 
-          </article>
         </main>
      
     </section>
