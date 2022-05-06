@@ -14,7 +14,7 @@ const SingleDestination = ({ destinations }) => {
     <article>
         <div className="image-container">
           <img src={images.png} alt={name} />
-        </div>
+        </div> 
         <Details
           name={name}
           description={description}

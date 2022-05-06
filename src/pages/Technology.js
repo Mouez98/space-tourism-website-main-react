@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import "../components/technology/Technology.css";
 
 const Technology = ({ technology }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const [curTechnologyIndex, setCurTechnologyIndex] = useState(0);
   const location = useLocation();
   const cssClass = location.pathname.slice(1);
@@ -14,6 +16,16 @@ const Technology = ({ technology }) => {
     setCurTechnologyIndex(index);
   };
 
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+  }, []);
+
+
+  console.log(windowWidth);
   return (
     <section className={cssClass}>
       <h2 className="title">
@@ -21,7 +33,14 @@ const Technology = ({ technology }) => {
       </h2>
       <article>
         <div className="image-container">
-          <img src={images.landscape} alt={name} />
+          <img
+            src={
+              windowWidth && windowWidth > 899
+                ? images.portrait
+                : images.landscape
+            }
+            alt={name}
+          />
         </div>
         <div className="details">
           <ul className="list">
@@ -37,9 +56,11 @@ const Technology = ({ technology }) => {
                 ))
               : null}
           </ul>
-          <h3 className="header">The terminolgy</h3>
-          <h3 className="sub-header">{name}</h3>
-          <p className="description">{description}</p>
+          <div className="details-description">
+            <h3 className="header">The terminolgy</h3>
+            <h3 className="sub-header">{name}</h3>
+            <p className="description">{description}</p>
+          </div>
         </div>
       </article>
     </section>

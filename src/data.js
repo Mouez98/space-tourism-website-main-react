@@ -1,14 +1,14 @@
 // Destinations images
-import moon from "./assets/design/destination/image-moon.png"
-import europa from "./assets/design/destination/image-europa.png"
-import titan from "./assets/design/destination/image-titan.png"
-import mars from "./assets/design/destination/image-mars.png"
+import moon from "./assets/design/destination/image-moon.webp"
+import europa from "./assets/design/destination/image-europa.webp"
+import titan from "./assets/design/destination/image-titan.webp"
+import mars from "./assets/design/destination/image-mars.webp"
 
 //Crew images
-import victor from "./assets/design/crew/image-victor-glover.png"
-import shuttleworth from "./assets/design/crew/image-mark-shuttleworth.png"
-import hurley from "./assets/design/crew/image-douglas-hurley.png"
-import anousheh from "./assets/design/crew/image-anousheh-ansari.png"
+import victor from "./assets/design/crew/image-victor-glover.webp"
+import shuttleworth from "./assets/design/crew/image-mark-shuttleworth.webp"
+import hurley from "./assets/design/crew/image-douglas-hurley.webp"
+import anousheh from "./assets/design/crew/image-anousheh-ansari.webp"
 
 //tecgnolohy images 
 import spaceport from './assets/design/technology/image-spaceport-landscape.jpg'
