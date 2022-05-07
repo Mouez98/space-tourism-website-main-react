@@ -1,0 +1,153 @@
+.crew {
+  background-image: url(../../assets/design/crew/background-crew-mobile.jpg);
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+
+
+.crew .image-container {
+  height: 223px;
+  margin: 30px auto;
+}
+
+.crew .image-container img {
+  width: 177px;
+  height: 222px;
+}
+
+.crew .list li {
+  margin: 0 10px;
+  opacity: 17%;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--light-grey);
+}
+.crew .list li.active {
+  background-color: var(--white);
+  opacity: 100%;
+}
+
+.crew .list li:hover {
+  background-color: var(--white);
+  opacity: 50%;
+}
+
+
+.crew-member {
+  font-family: var(--bellefair);
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.crew .header {
+  color: var(--light-blue);
+}
+
+.crew .role {
+  font-size: 18px;
+  font-family: var(--bellefair);
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--light-blue);
+}
+
+.crew hr {
+  margin-top: -3px;
+}
+
+.crew .single-destination-details div {
+  display: block;
+  margin: 20px auto;
+}
+
+.crew .single-destination-details div p,
+h3 {
+  text-transform: uppercase;
+}
+.crew .single-destination-details h3 {
+  font-family: var(--bellefair);
+  font-weight: normal;
+  margin: 7px 0;
+}
+.crew .single-destination-details div > p {
+  color: var(--main-white-color);
+}
+
+
+@media (min-width: 369px) {
+  .crew {
+    background-image: url(../../assets/design/crew/background-crew-tablet.jpg);
+    padding: 100px 90px 0;
+  }
+  
+ .crew article {
+   width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 0;
+  }
+  
+  .crew .image-container {
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .crew hr {
+     display: none;
+  }
+
+  .crew .image-container img {
+    width: 60%;
+    height: initial;
+  }
+  
+}
+
+@media (min-width: 900px) {
+  .crew {
+    background-image: url(../../assets/design/crew/background-crew-desktop.jpg);
+  }
+
+  .crew article {
+   flex-direction: row-reverse;
+  }
+ 
+  .crew .image-container {
+    height: initial;
+    width: initial;
+  }
+  
+  .crew .image-container img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .crew .details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .crew .list {
+    margin: 20px 0;
+  }
+  
+  .crew .list li:first-child {
+    margin-left: 0;
+  }
+
+  .crew-member {
+    font-size: 58px;
+  }
+  
+  .crew .role {
+    font-size: 34px;
+  }
+
+}

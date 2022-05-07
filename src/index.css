@@ -1,13 +1,28 @@
-*{
+:root {
+  /* main colors */
+  --main-white-color: hsl(231, 77.4%, 89.6%);
+  --white: #fff;
+  --dark-blue: #0b0d17;
+  --light-grey: #979797;
+  --darken-grey: #383b4b;
+  --light-blue: #d0d6f9;
+  /* main fonts */
+  --barlow: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  --bellefair: "Bellefair";
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
 }
+a {
+  text-decoration: none;
+}
 
 body {
-  
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--barlow);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,70 +30,193 @@ body {
 ul {
   list-style: none;
 }
+section {
+  padding-top: 90px;
+  text-align: center;
+  min-height: 100vh;
+}
 
-.container {
- width: 95%;
- margin: 0 auto 0;
+article {
+  padding-bottom: 20px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Components list */
+.list {
+  display: flex;
+  margin: 20px auto;
+  padding: 0;
+  justify-content: center;
+  color: var(--light-blue);
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .home {
-  background: url(../../space-tourism-website-main/starter-code/assets/design/home/background-home-mobile.jpg) ;
-  color: #fff;
-  height: 100vh;
+  background: url(../../space-tourism-website-main/starter-code/assets/design/home/background-home-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 1rem;
   text-align: center;
-}
-.home header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.7rem;
-
-}
-.home header .logo, .burgerIcon {
-    width: 1.7rem;
-    height: 1.7rem;
-}
-.home header img {
-    width: 100%;
-    height: 100%;
-}
-
-
-.home header nav {
-  
-}
-.home header nav ul {
-
-}
-.home header nav ul li{
-
+  color: var(--main-white-color);
+  padding: 1rem 0;
 }
 
 .home main {
-
+  color: var(--white);
 }
 
 .home main .text {
-  
+  margin: 70px 0 40px;
 }
 .home main .text .question {
   margin: 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  font-size: 16px;
+  font-weight: normal;
 }
-.home main .text .title{
+.home main .text .title {
   margin: 1rem 0;
+  font-family: var(--bellafair);
+  font-size: 80px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 .home main .text .description {
   margin: 1rem 0;
+  line-height: 1.5;
+  color: var(--light-blue);
 }
 .home main .button {
-
+  width: 150px;
+  height: 150px;
+  display: grid;
+  color: var(--dark-blue);
+  margin: 0 auto;
+  position: relative;
 }
+.home main .button::before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--light-grey);
+}
+
 .home main .button .circle {
-
+  border-radius: 50%;
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .home main .button .circle .text {
-
+  color: #0b0d17;
+  font-family: var(--bellafair);
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 65px;
+}
+/* Some global Classes */
+.description {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #d0d6f9;
+  text-align: center;
+  margin: 20px 0;
+  font-family: var(--barlowF);
 }
 
+/* Tablet */
+@media (min-width: 668px) and (max-width: 900px) {
+  .home {
+    background-image: url(./assets/design/home/background-home-tablet.jpg);
+  }
+  .home .container {
+    width: 70%;
+  }
+  .description {
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .home {
+    padding-bottom: 40px;
+    background-image: url(./assets/design/home/background-home-desktop.jpg);
+  }
+  .home .container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .home main {
+    display: grid;
+    margin: 40px auto 20px;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--white);
+    align-items: center;
+  }
+
+  .home main .text {
+    margin: 70px 0 40px;
+    text-align: left;
+  }
+  .home main .text .question {
+    font-size: 30px;
+  }
+  .home main .text .title {
+    font-size: 160px;
+  }
+  .home main .text .description {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .home main .button {
+    margin-top: 60px;
+    width: 275px;
+    height: 275px;
+  }
+
+  .home main .button:hover::before {
+    opacity: 0.3;
+    display: block;
+  }
+
+  .home main .button .circle {
+    align-items: center;
+    display: grid;
+  }
+
+  .home main .button .circle .text {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 1.2px;
+    margin-top: 50px;
+  }
+  .description {
+    font-size: 20px;
+  }
+  .list {
+    justify-content: flex-start;
+  }
+}

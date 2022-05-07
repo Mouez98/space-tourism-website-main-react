@@ -1,0 +1,129 @@
+.technology {
+  background-image: url(../../assets/design/technology/background-technology-mobile.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.technology .image-container {
+  width: auto;
+  height: 170px;
+  margin: 30px auto;
+}
+
+.technology .image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.technology .list li {
+  display: grid;
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 1px solid var(--light-grey);
+  color: #fff;
+  width: 40px;
+  font-size: 18px;
+  font-family: var(--bellefair);
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.technology .list li.active {
+  background-color: var(--white);
+
+  color: #0b0d17;
+}
+.technology .list li:hover {
+  border: 2px solid var(--white);
+}
+
+.sub-header {
+  font-size: 26px;
+  font-family: var(--bellefair);
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.technology .header {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2.3px;
+  font-size: 16px;
+  margin: 7px 0;
+  color: var(--light-blue);
+}
+
+/* Tablet */
+
+@media (min-width: 369px) {
+
+  .technology .image-container {
+    width: auto;
+    height: auto;
+  }
+
+  .technology .details {
+    margin: auto;
+    width: 60%;
+  }
+
+ 
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .technology {
+    padding: 100px 0px 20px 90px
+    }
+
+    .technology article {
+      width: 100%;
+    }
+
+  .technology .title {
+    margin: 0;
+  }
+
+  .technology .image-container {
+    order: 2;
+    max-height: 515px;
+  }
+
+
+  .technology .details {
+    order: 1;
+    display: flex;
+  }
+
+  .technology .list li {
+    text-align: center;
+    margin: 10px 0;
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+  }
+
+  .technology .list li:first-child{
+    margin-top: 0;
+  }
+
+  .technology .list {
+    flex-direction: column;
+    margin: 0 40px 0 0;
+  }
+
+  .sub-header {
+    font-size: 56px;
+  }
+
+  .technology .header {
+    font-size: 20px;
+    color: var(--light-blue);
+  }
+
+  
+}
