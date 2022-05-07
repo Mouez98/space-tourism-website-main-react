@@ -48,29 +48,22 @@
   color: var(--white);
 }
 
-.header {
+.technology .header {
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 2.3px;
   font-size: 16px;
   margin: 7px 0;
+  color: var(--light-blue);
 }
 
-.description {
-  font-size: 17px;
-}
 /* Tablet */
 
 @media (min-width: 369px) {
-  .technology {
-  }
 
   .technology .image-container {
     width: auto;
     height: auto;
-  }
-
-  .technology .image-container img {
   }
 
   .technology .details {
@@ -78,38 +71,28 @@
     width: 60%;
   }
 
-  .technology .list li {
-  }
-  .technology .list li:hover {
-  }
-  .technology .list li .active {
-  }
-
-  .sub-header {
-  }
-
-  .header {
-  }
-
-  .description {
-  }
+ 
 }
 
 /* Desktop */
 @media (min-width: 900px) {
   .technology {
-    padding: 120px 0px 20px 90px
+    padding: 100px 0px 20px 90px
     }
 
-  .details-description {
+    .technology article {
+      width: 100%;
+    }
+
+  .technology .title {
+    margin: 0;
   }
 
   .technology .image-container {
     order: 2;
+    max-height: 515px;
   }
 
-  .technology .image-container img {
-  }
 
   .technology .details {
     order: 1;
@@ -137,12 +120,10 @@
     font-size: 56px;
   }
 
-  .header {
+  .technology .header {
     font-size: 20px;
     color: var(--light-blue);
   }
 
-  .description {
-    font-size: 20px;
-  }
+  
 }

@@ -4,13 +4,13 @@
   --white: #fff;
   --dark-blue: #0b0d17;
   --light-grey: #979797;
-  --darken-grey: #383B4B;
+  --darken-grey: #383b4b;
   --light-blue: #d0d6f9;
   /* main fonts */
   --barlow: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-  "Helvetica Neue", sans-serif;
-  --bellefair: 'Bellefair';
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  --bellefair: "Bellefair";
 }
 
 * {
@@ -33,16 +33,27 @@ ul {
 section {
   padding-top: 90px;
   text-align: center;
+  min-height: 100vh;
 }
 
-.container {
-  /* width: 95%;
-  margin: 0 auto 0; */
-}
 article {
   padding-bottom: 20px;
   width: 95%;
   margin: 0 auto;
+}
+
+/* Components list */
+.list {
+  display: flex;
+  margin: 20px auto;
+  padding: 0;
+  justify-content: center;
+  color: var(--light-blue);
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .home {
@@ -51,7 +62,7 @@ article {
   background-repeat: no-repeat;
   text-align: center;
   color: var(--main-white-color);
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 .home main {
@@ -122,35 +133,45 @@ article {
   text-transform: uppercase;
   margin-top: 65px;
 }
-
+/* Some global Classes */
+.description {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #d0d6f9;
+  text-align: center;
+  margin: 20px 0;
+  font-family: var(--barlowF);
+}
 
 /* Tablet */
-@media (min-width: 368px) and (max-width: 1024px) {
+@media (min-width: 668px) and (max-width: 900px) {
   .home {
     background-image: url(./assets/design/home/background-home-tablet.jpg);
   }
   .home .container {
-    width: 60%;
+    width: 70%;
   }
-  
+  .description {
+    font-size: 18px;
+  }
 }
 
 /* Desktop */
-@media (min-width: 1025px) {
+@media (min-width: 900px) {
   .home {
-    padding-bottom:  40px ;
+    padding-bottom: 40px;
     background-image: url(./assets/design/home/background-home-desktop.jpg);
   }
   .home .container {
     width: 100%;
     margin: 0;
   }
-  
+
   .home main {
     display: grid;
-    margin: 120px auto 0;
+    margin: 40px auto 20px;
     width: 90%;
-    grid-template-columns: repeat(2, 450px);
+    grid-template-columns: repeat(2, 1fr);
     color: var(--white);
     align-items: center;
   }
@@ -158,52 +179,44 @@ article {
   .home main .text {
     margin: 70px 0 40px;
     text-align: left;
-
   }
   .home main .text .question {
-
-    font-size: 28px;
+    font-size: 30px;
   }
   .home main .text .title {
-    font-size: 150px;
-
+    font-size: 160px;
   }
   .home main .text .description {
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
   }
+
   .home main .button {
+    margin-top: 60px;
     width: 275px;
     height: 275px;
-    
-     
   }
-  .home main .button:hover::before {
 
+  .home main .button:hover::before {
     opacity: 0.3;
-    
     display: block;
-   
   }
-  
+
   .home main .button .circle {
     align-items: center;
     display: grid;
-    
   }
-  
+
   .home main .button .circle .text {
     text-align: center;
     font-size: 36px;
     letter-spacing: 1.2px;
     margin-top: 50px;
   }
-}
-
-/* Components list */
-.list {
-  display: flex;
-  margin: 20px auto;
-  padding: 0;
-  justify-content: center;
+  .description {
+    font-size: 20px;
+  }
+  .list {
+    justify-content: flex-start;
+  }
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 
-import { LinksContext } from "../store/context-links";
+import { LinksContext } from "../../store/context-links";
 
-import logo from "../assets/shared/logo.svg";
-import iconBurger from "../assets/shared/icon-hamburger.svg";
-import closeIcon from "../assets/shared/icon-close.svg";
+import logo from "../../assets/shared/logo.svg";
+import iconBurger from "../../assets/shared/icon-hamburger.svg";
+import closeIcon from "../../assets/shared/icon-close.svg";
 import "./Header.css";
 
 const HeaderNav = () => {
@@ -57,7 +57,7 @@ const HeaderNav = () => {
           <img src={logo} alt="logo" />
         </div>
         <nav>
-          {windowWidth && windowWidth < 368 ? (
+          {windowWidth && windowWidth < 668 ? (
             <div className="burgerIcon" onClick={showSidebarHandler}>
               <img src={iconBurger} alt="burgerIcon" />
             </div>

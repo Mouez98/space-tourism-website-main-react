@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import HeaderNav from "../components/HeaderNav";
+import HeaderNav from "../components/headerNav/HeaderNav";
 
 const SharedLayout = () => {
   return(

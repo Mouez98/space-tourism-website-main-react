@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Details from "./Details";
+import DestinationDetails from "./DestinationDetails";
 
-const SingleDestination = ({ destinations }) => {
+const Destination = ({ destinations }) => {
   const [curDestinationIndex, setCurDestinationIndex] = useState(0);
   const { name, description, distance, travel, images } =
     destinations[curDestinationIndex];
@@ -15,7 +15,7 @@ const SingleDestination = ({ destinations }) => {
         <div className="image-container">
           <img src={images.png} alt={name} />
         </div> 
-        <Details
+        <DestinationDetails
           name={name}
           description={description}
           distance={distance}
@@ -28,4 +28,4 @@ const SingleDestination = ({ destinations }) => {
   );
 };
 
-export default SingleDestination;
+export default Destination;

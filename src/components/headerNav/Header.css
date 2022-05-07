@@ -12,6 +12,7 @@ header {
   
   }
   .header .logo {
+    transition: all .3s linear ;
     width: 40px;
     height: 40px;
   }
@@ -73,10 +74,14 @@ header {
         width: 100%;
         background-color: var(--white);
       }
+      .header .logo {
+        width: 48px;
+        height: 48px;
+    }
   }
 
   /* Desktop */
-  @media (min-width: 1025px) {
+  @media (min-width: 900px) {
     header {
         padding-left: 1.5rem;
       }
@@ -86,6 +91,7 @@ header {
         backdrop-filter: blur(20px);
         display: flex;
         position: relative;
+        right: -15px;
         background-color: rgb(255 255 255/ 4%);
         align-items: center;
       }
@@ -102,28 +108,13 @@ header {
       header ul {
         display: flex;
       }
-      /* header ul li {
-        margin: 0 10px;
-        position: relative;
-        cursor: pointer;
-        color: var(--white);
-      } */
+   
       ul li span {
         display: inline-block;
         margin-right: 5px;
       }
-      /* header ul li::before {
-        content: "";
-        height: 2px;
-        width: 0;
-        position: absolute;
-        bottom: -24px;
-        left: 0;
-        background-color: var(--white);
-      }
-      header ul li:hover::before {
-        width: 100%;
-      } */
+     
+
   }
 
   .aside {

@@ -1,4 +1,4 @@
-const Links = ({ destinations, setCurDestination, curDestinationIndex }) => {
+const DestinationLinks = ({ destinations, setCurDestination, curDestinationIndex }) => {
   return (
     <ul className="list">
       {destinations
@@ -12,4 +12,4 @@ const Links = ({ destinations, setCurDestination, curDestinationIndex }) => {
   );
 };
 
-export default Links;
+export default DestinationLinks;

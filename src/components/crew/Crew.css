@@ -3,13 +3,12 @@
   background-size: cover;
   color: #fff;
   text-align: center;
-  height: auto;
+  min-height: 100vh;
 }
 
 
 
 .crew .image-container {
-  width: 327px;
   height: 223px;
   margin: 30px auto;
 }
@@ -18,10 +17,6 @@
   width: 177px;
   height: 222px;
 }
-
-.destinations .details {
-}
-
 
 .crew .list li {
   margin: 0 10px;
@@ -50,49 +45,55 @@
   font-weight: normal;
 }
 
-.role {
+.crew .header {
+  color: var(--light-blue);
+}
+
+.crew .role {
   font-size: 18px;
   font-family: var(--bellefair);
   font-weight: normal;
   text-transform: uppercase;
-  color: var(--light-grey);
+  color: var(--light-blue);
 }
 
 .crew hr {
   margin-top: -3px;
 }
 
-.single-destination-details div {
+.crew .single-destination-details div {
   display: block;
   margin: 20px auto;
 }
 
-.single-destination-details div p,
+.crew .single-destination-details div p,
 h3 {
   text-transform: uppercase;
 }
-.single-destination-details h3 {
+.crew .single-destination-details h3 {
   font-family: var(--bellefair);
   font-weight: normal;
   margin: 7px 0;
 }
-.single-destination-details div > p {
+.crew .single-destination-details div > p {
   color: var(--main-white-color);
 }
 
+
 @media (min-width: 369px) {
   .crew {
-    padding: 90px 20px 0;
+    background-image: url(../../assets/design/crew/background-crew-tablet.jpg);
+    padding: 100px 90px 0;
   }
   
  .crew article {
+   width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding-bottom: 0;
   }
   
   .crew .image-container {
-    order: 3;
     width: auto;
     height: auto;
     margin-bottom: 0;
@@ -107,4 +108,46 @@ h3 {
     height: initial;
   }
   
+}
+
+@media (min-width: 900px) {
+  .crew {
+    background-image: url(../../assets/design/crew/background-crew-desktop.jpg);
+  }
+
+  .crew article {
+   flex-direction: row-reverse;
+  }
+ 
+  .crew .image-container {
+    height: initial;
+    width: initial;
+  }
+  
+  .crew .image-container img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .crew .details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .crew .list {
+    margin: 20px 0;
+  }
+  
+  .crew .list li:first-child {
+    margin-left: 0;
+  }
+
+  .crew-member {
+    font-size: 58px;
+  }
+  
+  .crew .role {
+    font-size: 34px;
+  }
+
 }

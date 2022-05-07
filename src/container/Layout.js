@@ -2,8 +2,8 @@ import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Crew from "../pages/Crew";
-import Technology from "../pages/Technology";
-import Destination from "../pages/Destination";
+import Technologies from "../pages/Technologies";
+import Destinations from "../pages/Destinations";
 
 import { LinksContext } from "../store/context-links";
 
@@ -18,9 +18,9 @@ function Layout() {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />}/>
-        <Route path="/destinations" element={<Destination destinations={destinations} />} />
+        <Route path="/destinations" element={<Destinations destinations={destinations} />} />
         <Route path="/crew" element={<Crew  crew={crew}/>} />
-        <Route path="/technology" element={<Technology  technology={technology}/>} />
+        <Route path="/technology" element={<Technologies  technology={technology}/>} />
       </Route>
     </Routes>
   );

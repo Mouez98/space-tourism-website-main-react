@@ -1,8 +1,8 @@
-import Links from "./Links";
+import Links from "./DestinationLinks";
 
 
 
-const Details = ({name, setCurDestination, description, distance, travel, destinations, index }) => {
+const DestinationDetails = ({name, setCurDestination, description, distance, travel, destinations, index }) => {
     return(
 <div className="details">
 <div>
@@ -25,4 +25,4 @@ const Details = ({name, setCurDestination, description, distance, travel, destin
     )
 }
 
-export default Details
+export default DestinationDetails
