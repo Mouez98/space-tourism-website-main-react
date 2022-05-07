@@ -4,8 +4,8 @@ import TechnologyDetails from "./TechnologyDetails";
 const Technology = ({ technology }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [curTechnologyIndex, setCurTechnologyIndex] = useState(0);
-
-  const { name, description, images } = technology[curTechnologyIndex];
+  let name,description,images
+  
 
   const linkClickHandler = (index) => {
     setCurTechnologyIndex(index);
@@ -18,6 +18,13 @@ const Technology = ({ technology }) => {
 
     window.addEventListener("resize", handleResize);
   }, []);
+
+  if(technology){
+    ({ name, description, images } =  technology[curTechnologyIndex]);
+ } else {
+  return(<h3>Not Found</h3>)
+ }
+ 
   return (
     <article>
       <div className="image-container">
