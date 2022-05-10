@@ -38,13 +38,13 @@ header {
         height: 70px;
         backdrop-filter: blur(20px);
         display: flex;
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         background-color: rgb(255 255 255/ 4%);
         align-items: center;
       }
-       ul {
+      nav ul {
         display: flex;
       }
       ul li span {
@@ -105,7 +105,7 @@ header {
         height: 1px;
         background-color: var(--light-grey);
       }
-      header ul {
+      header nav ul {
         display: flex;
       }
    
@@ -117,12 +117,12 @@ header {
 
   }
 
+ /* Only for Mobile */
   .aside {
     padding: 14px;
     position: fixed;
     right: 0;
     top: 0;
-    transform: translate(4000%);
     background-color: rgb(10 16 58 / 50%);
     height: 100vh;
     display: flex;
@@ -133,10 +133,7 @@ header {
     z-index: 10;
     transition: all 0.3s linear;
   }
-  
-  .aside.show-aside {
-    transform: translate(0);
-  }
+ 
   
   aside button {
     align-self: flex-end;
@@ -187,3 +184,13 @@ header {
     width: 100%;
     background-color: var(--white);
   }
+
+   /* CssTransition Classes  */
+   .my-enter {
+    animation: slideInRight .3s linear;
+   
+   }
+ 
+   .my-exit {
+     animation: slideOutRight .3s linear;
+   }

@@ -13,8 +13,9 @@
   margin: 30px auto;
 }
 
-.destinations .image-container img {
+.image-container img {
   width: 100%;
+  animation: zoomIn .3s ;
 }
 
 .destinations .title {

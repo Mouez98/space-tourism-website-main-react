@@ -40,6 +40,7 @@ article {
   padding-bottom: 20px;
   width: 95%;
   margin: 0 auto;
+  animation: fadeInLeft .5s;
 }
 
 /* Components list */
@@ -220,3 +221,4 @@ article {
     justify-content: flex-start;
   }
 }
+
