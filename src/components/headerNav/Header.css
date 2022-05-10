@@ -44,7 +44,7 @@ header {
         background-color: rgb(255 255 255/ 4%);
         align-items: center;
       }
-       ul {
+      nav ul {
         display: flex;
       }
       ul li span {
@@ -105,7 +105,7 @@ header {
         height: 1px;
         background-color: var(--light-grey);
       }
-      header ul {
+      header nav ul {
         display: flex;
       }
    
