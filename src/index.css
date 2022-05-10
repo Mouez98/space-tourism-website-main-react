@@ -58,7 +58,7 @@ article {
 }
 
 .home {
-  background: url(../../space-tourism-website-main/starter-code/assets/design/home/background-home-mobile.jpg);
+  background: url(./assets/design//home/background-home-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
